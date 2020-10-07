@@ -1,0 +1,17 @@
+#Steps Specific Configuration
+general:
+  changeManagement:
+    endpoint: 'https://zsmswde0.eu.airbus.corp//sap/opu/odata/sap/AI_CRM_GW_CM_CI_SRV/'
+    credentialsId: 'CM'
+    type: 'SOLMAN'
+    clientOpts: '-Djavax.net.ssl.trustStore=/var/jenkins_home/ssl/myTrustStore'
+steps:
+  mtaBuild:
+    buildTarget: 'XSA'
+    verbose: true
+  transportRequestCreate:
+    developmentSystemId: 'MFE~ABAP/801'
+  transportRequestUploadFile:
+    applicationDescription: 'Test devops'
+    applicationId: 'WebIDEDemo1'
+    applicationName: 'WebIDEDemo1'
