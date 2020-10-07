@@ -1,0 +1,11 @@
+{
+     "logical-db-service": {
+            "object_owner": {
+                   "roles": ["provided_service_g"]
+              },
+            "application_user": {
+                   "roles": ["provided_service"]
+              }
+
+		}
+}
