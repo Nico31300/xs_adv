@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_test" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="CV_test"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="xGI.RESB">
+    <resourceUri>xGI.RESB</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="xGI.RESB">
+  <attributes>
+    <attribute id="RSNUM" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Number of reservation/dependent requirements"/>
+      <keyMapping columnObjectName="xGI.RESB" columnName="RSNUM"/>
+    </attribute>
+  
+    <attribute id="RSPOS" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Item number of reservation/dependent requirements"/>
+  
+      <keyMapping columnObjectName="xGI.RESB" columnName="RSPOS"/>
+  
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
