@@ -1,0 +1,9 @@
+  
+{
+  "xGI.RESB": {
+    "target": {
+      "object": "RESB",
+      "schema.configure": "logical-db-service/xGI"
+    }
+  }
+}
