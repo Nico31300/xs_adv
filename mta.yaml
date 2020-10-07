@@ -1,0 +1,39 @@
+ID: WebIDEDemo1
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: WebIDEDemo1-DB
+   type: hdb
+   path: db
+   requires:
+    - name: WebIDEDemo1_DB
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+
+
+
+    - name: cross-container-service-1
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: logical-db-service
+        service: ~{the-service-name}
+                          
+
+
+resources:
+ - name: WebIDEDemo1_DB
+   parameters:
+      config:
+         schema: WebIDEDemo1_DB
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: cross-container-service-1
+   parameters:
+      service-name: db-service
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
