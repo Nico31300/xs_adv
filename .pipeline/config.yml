@@ -15,3 +15,12 @@ steps:
     applicationDescription: 'Test devops'
     applicationId: 'WebIDEDemo1'
     applicationName: 'WebIDEDemo1'
+xsDeploy:
+    apiUrl: https://api.dhlhvie0.eu.airbus.corp:36633
+    # credentialsId: 'XS' omitted, 'XS' is the default
+    docker:
+      dockerImage: ppiper/xs-cli
+    loginOpts: --skip-ssl-validation
+    org: airbus
+    space: DEV
+    mtaPath: WebIDEDemo1.mtar
