@@ -1,26 +1,11 @@
 #Steps Specific Configuration
-general:
-  changeManagement:
-    endpoint: 'https://zsmswde0.eu.airbus.corp//sap/opu/odata/sap/AI_CRM_GW_CM_CI_SRV/'
-    credentialsId: 'CM'
-    type: 'SOLMAN'
-    clientOpts: '-Djavax.net.ssl.trustStore=/var/jenkins_home/ssl/myTrustStore'
 steps:
-  mtaBuild:
-    buildTarget: 'XSA'
-    verbose: true
-  transportRequestCreate:
-    developmentSystemId: 'MFE~ABAP/801'
-  transportRequestUploadFile:
-    applicationDescription: 'Test devops'
-    applicationId: 'WebIDEDemo1'
-    applicationName: 'WebIDEDemo1'
-xsDeploy:
-    apiUrl: https://api.dhlhvie0.eu.airbus.corp:36633
-    # credentialsId: 'XS' omitted, 'XS' is the default
+  xsDeploy:
+    apiUrl: 'https://api.dhlhvie0.eu.airbus.corp:36633'
     docker:
-      dockerImage: ppiper/xs-cli
-    loginOpts: --skip-ssl-validation
-    org: airbus
-    space: DEV
-    mtaPath: WebIDEDemo1.mtar
+      dockerImage: 'ppiper/xs-cli'
+    loginOpts: '--skip-ssl-validation'
+    org: 'airbus'
+    space: 'DEV'
+    mtaPath: 'WebIDEDemo1.mtar'
+
